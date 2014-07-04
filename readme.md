@@ -46,7 +46,7 @@ Check out `web/index.php` file.
 
 ##### Error pages:
 
-* [http://silexerrorhandling.local/error](http://silexerrorhandling.local/exception)
+* [http://silexerrorhandling.local/error](http://silexerrorhandling.local/error)
 * [http://silexerrorhandling.local/error?debug=1](http://silexerrorhandling.local/error?debug=1)
 * [http://silexerrorhandling.local/error?debug=2](http://silexerrorhandling.local/error?debug=2)
 * [http://silexerrorhandling.local/error?debug=3](http://silexerrorhandling.local/error?debug=3)
