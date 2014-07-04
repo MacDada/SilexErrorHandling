@@ -1,0 +1,45 @@
+---
+- name: Podmiana /etc/resolv.conf
+  template: src=resolv.conf.j2 dest=/etc/resolv.conf
+- name: Kopiowanie bashrc
+  copy: src=.bashrc dest=~/.bashrc
+  sudo: False
+- name: Kopiowanie sudoers
+  copy: src=sudoers dest=/etc/sudoers
+- name: Ustawianie repozytoriow
+  copy: src=sources.list dest=/etc/apt/sources.list
+- name: Kopiowanie konfiguracji apta
+  copy: src=80snapshots dest=/etc/apt/apt.conf.d/80snapshots
+- name: Aktualizacja bazy pakietow i upgrade
+  apt: update_cache=yes upgrade=dist
+- name: Instalacja podstawowego oprogramowania
+  apt: pkg={{ item }} state=present
+  with_items:
+    - htop
+    - atop
+    - iotop
+    - dstat
+    - mc
+    - curl
+    - git
+    - ant
+    - python-mysqldb
+- name: Kopiowanie locale.gen
+  copy: src=locale.gen dest=/etc/locale.gen
+- name: Generowanie locale-gen
+  command: locale-gen
+- name: Kopiowanie klucza publicznego
+  copy: src=id_rsa.pub dest=~/.ssh/id_rsa.pub
+  sudo: False
+- name: Kopiowanie klucza prywatnego
+  copy: src=id_rsa dest=~/.ssh/id_rsa mode=0600
+  sudo: False
+- name: Kopiowanie fingerprintow hostow
+  copy: src=known_hosts dest=~/.ssh/known_hosts
+  sudo: False
+- name: Ustawienie hostname
+  template: src=hostname.j2 dest=/etc/hostname
+- name: Ustawienie hostname w kernelu
+  command: "sysctl -w kernel.hostname={{ common.hostname }}"
+- name: Podmiana /etc/hosts
+  template: src=hosts.j2 dest=/etc/hosts

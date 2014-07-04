@@ -1,0 +1,25 @@
+---
+
+- name: Kolorujemy efekt polecen gita
+  command: git config --global color.ui true
+  sudo: False
+
+- name: git-svn powinien usuwac zbedne katalogi z repozytorium
+  command: git config --global svn.rmdir true
+  sudo: False
+
+- name: Skrot do git branch
+  command: git config --global alias.br branch
+  sudo: False
+
+- name: Skrot do git status
+  command: git config --global alias.st status
+  sudo: False
+
+- name: Globalnie ignorowane pliki
+  copy: src=gitignore dest=~/.gitignore
+  sudo: False
+
+- name: Globalnie ignorowane pliki
+  command: git config --global core.excludesfile '~/.gitignore'
+  sudo: False

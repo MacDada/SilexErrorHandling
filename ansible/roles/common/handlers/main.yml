@@ -1,0 +1,3 @@
+---
+- name: apt update upgrade
+  action: apt update_cache=yes upgrade=full

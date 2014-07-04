@@ -1,0 +1,2 @@
+# wylaczamy sprawdzanie relase date bo inaczej nie dziala aktualizacja z snapshotow
+Acquire::Check-Valid-Until "false";

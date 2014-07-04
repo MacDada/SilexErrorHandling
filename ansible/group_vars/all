@@ -1,0 +1,11 @@
+---
+php:
+  user: vagrant
+  group: vagrant
+nginx:
+  user: vagrant
+  group: vagrant
+  host: silexerrorhandling.local
+common:
+  hostname: vagrant-silexerrorhandling
+  resolv: 8.8.8.8

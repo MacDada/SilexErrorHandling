@@ -1,0 +1,10 @@
+---
+- name: Configure SilexErrorHandling project
+  hosts: silexerrorhandling
+  roles:
+    - common
+    - git
+    - nginx
+    - php-fpm
+    - composer
+    - silexerrorhandling

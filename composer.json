@@ -1,0 +1,15 @@
+{
+    "name": "dn/silexerrorhandling",
+    "description": "Silex error handling example",
+    "require": {
+        "silex/silex": "~1.2",
+        "monolog/monolog": "~1.10"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dawid Nowak",
+            "email": "code@dnowak.pl"
+        }
+    ]
+}

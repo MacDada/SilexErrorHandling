@@ -1,0 +1,4 @@
+deb     http://snapshot.debian.org/archive/debian/20131018T094229Z/ stable main
+deb-src http://snapshot.debian.org/archive/debian/20131018T094229Z/ stable main
+deb     http://snapshot.debian.org/archive/debian-security/20131018T094229Z/ stable/updates main
+deb-src http://snapshot.debian.org/archive/debian-security/20131018T094229Z/ stable/updates main

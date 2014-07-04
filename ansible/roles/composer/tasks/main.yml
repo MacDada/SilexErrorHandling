@@ -1,0 +1,10 @@
+---
+- name: Pobieranie instalatora composera
+  command: wget -O /home/vagrant/composer.install https://getcomposer.org/installer creates=/home/vagrant/composer.install
+  sudo: False
+- name: Tworzenie katalogu dla composera
+  file: path=/home/vagrant/composer state=directory
+  sudo: False
+- name: Instalowanie composera
+  command: php /home/vagrant/composer.install --install-dir=/home/vagrant/composer creates=/home/vagrant/composer/composer.phar
+  sudo: False

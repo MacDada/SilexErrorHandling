@@ -1,0 +1,2 @@
+[silexerrorhandling]
+10.66.1.114 ansible_ssh_user=vagrant

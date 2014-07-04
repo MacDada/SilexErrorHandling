@@ -1,0 +1,11 @@
+---
+- name: Instalowanie nginxa
+  apt: pkg=nginx-full state=present
+- name: create self-signed SSL cert
+  command: openssl req -new -nodes -x509 -subj "/C=US/ST=Oregon/L=Portland/O=IT/CN=localhost" -days 3650 -keyout /etc/nginx/server.key -out /etc/nginx/server.crt -extensions v3_ca creates=/etc/nginx/server.crt
+  notify:
+  - restart nginx
+- name: Kopiowanie plikow konfiguracyjnych
+  copy: src=nginx.conf dest=/etc/nginx/nginx.conf
+  notify:
+  - restart nginx
