@@ -42,6 +42,7 @@ Check out `web/index.php` file.
 * [http://silexerrorhandling.local/exception?debug=4](http://silexerrorhandling.local/exception?debug=4)
 * [http://silexerrorhandling.local/exception?debug=5](http://silexerrorhandling.local/exception?debug=5)
 * [http://silexerrorhandling.local/exception?debug=6](http://silexerrorhandling.local/exception?debug=6)
+* [http://silexerrorhandling.local/exception?debug=7](http://silexerrorhandling.local/exception?debug=7)
 
 ##### Error pages:
 
@@ -52,6 +53,7 @@ Check out `web/index.php` file.
 * [http://silexerrorhandling.local/error?debug=4](http://silexerrorhandling.local/error?debug=4)
 * [http://silexerrorhandling.local/error?debug=5](http://silexerrorhandling.local/error?debug=5)
 * [http://silexerrorhandling.local/error?debug=6](http://silexerrorhandling.local/error?debug=6)
+* [http://silexerrorhandling.local/error?debug=7](http://silexerrorhandling.local/error?debug=7)
 
 
 ## Conclusions?

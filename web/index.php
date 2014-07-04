@@ -1,7 +1,8 @@
 <?php
 
 require_once __DIR__.'/../vendor/autoload.php';
-
+//phpinfo();
+//die();
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -70,6 +71,14 @@ switch ($debug) {
          * (xdebug stacktrace shown, although standard silex error page would be nice)
          */
         ini_set('display_errors', 1);
+        break;
+    case 7:
+        /**
+         * Combine 6 and 1
+         * (blank page on error)
+         */
+        ini_set('display_errors', 1);
+        Symfony\Component\Debug\Debug::enable();
         break;
     default:
         die('invalid debug option');
