@@ -9,7 +9,7 @@ Check out `web/index.php` file.
 
 ## Goals?
 
-* `php.ini`: `display_errors: Off` – we shouldn't see any errors by default
+* `php.ini`: `display_errors = Off` – we shouldn't see any errors by default
 * production usage: nice error page (not a blank page)
 * debugging: stacktrace (would be nice if it was shown by Silex, not Xdebug)
 
